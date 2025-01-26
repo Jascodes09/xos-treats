@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery</title>
+  <style>
+    /* General Reset */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf3;
+  color: #4a4a4a;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffe0e9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5e8a;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ffe0e9, #ffb6c1);
+  color: #4a4a4a;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Menu Section */
+.menu {
+  padding: 2rem;
+}
+
+.menu h2 {
+  text-align: center;
+  color: #ff5e8a;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap into the next row if necessary */
+  gap: 2rem; /* Add space between columns */
+  justify-content: center;
+}
+
+.category {
+  flex: 1 1 calc(50% - 1rem);
+  box-sizing: border-box;
+}
+
+.food-card {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.food-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.food-card h4 {
+  margin: 0.5rem 0;
+  color: #ff5e8a;
+}
+
+.food-card button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5e8a;
+  color: white;
+  cursor: pointer;
+}
+
+.food-card button:hover {
+  background-color: #e44c72;
+}
+
+/* About Us Section */
+.about {
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffe0e9;
+}
+
+.about h2 {
+  color: #ff5e8a;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffb6c1;
+  color: #4a4a4a;
+}
+
+.footer .socials a {
+  margin: 0 0.5rem;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🍰 XO's Treats </div>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to XO's Treats!</h1>
+    <p>Freshly made with love, delivered to your doorstep.💕</p>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+
+    <div class="category">
+      <h3>Starters</h3>
+      <div class="food-card">
+        <img src="sandwich.jpeg" alt="Sandwiches">
+        <h4>Sandwiches</h4>
+        <p>Price: $5</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="category">
+      <h3>Desserts</h3>
+      <div class="food-card" onclick="redirectToDessertsPage()">
+        <img src="chocolatecake.jpeg" alt="Chocolate Cake">
+        <h4>Chocolate Cake</h4>
+        <p>Price: $7</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="category">
+        <h3>Drinks and Tea's</h3>
+        <div class="food-card" onclick="redirectToDrinksandTeasPage()">
+          <img src="bobatea.jpeg" alt="BobaTea">
+          <h4>Boba Tea</h4>
+          <p>Price: $8</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Hi, I’m Jazzie! 💕 Welcome to XO's Treats!</p>
+    <p>where every dish is made with hugs and kisses. From sweet treats to savory delights, I deliver deliciousness right to your door! 🍰🍓</p>
+    <p>Thank you for choosing us – let’s make your day a little sweeter, one bite at a time. 🛵💖</p> 
+    <p>With love,
+    Jazzie 💕🧁</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with 💗💋 by  XO's Treats | Contact us at xos@treats.com</p>
+    <div class="socials">
+      <a href="http://instagram.com/xostreats_77">Instagram</a>
+    </div>
+  </footer>
+  <script>
+    function redirectToDessertsPage() {
+  window.open("desserts.html", "_blank");
+}
+  </script>
+</body>
+</html>
